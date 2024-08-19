@@ -27,7 +27,7 @@ const MobileNav = () => {
               {user?.email}
             </span>
           ) : (
-            <span> Welcome to MernEats.com!</span>
+            <span> Welcome to Coursadia.com!</span>
           )}
         </SheetTitle>
         <Separator />
@@ -36,7 +36,7 @@ const MobileNav = () => {
             <MobileNavLinks />
           ) : (
             <Button
-              onClick={() => loginWithRedirect()}
+              onClick={async() => await loginWithRedirect()}
               className="flex-1 font-bold bg-orange-500"
             >
               Log In
