@@ -6,8 +6,6 @@ import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Auth0ProviderWithNavigate>
       <AppRoutes />
-    </Auth0ProviderWithNavigate>
   </StrictMode>,
 )

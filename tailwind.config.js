@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette');
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 module.exports = {
   darkMode: ["class"],
@@ -10,6 +11,7 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   prefix: "",
+  darkMode: "class",
   theme: {
     container: {
       center: true,
@@ -22,6 +24,7 @@ module.exports = {
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
       },
+      plugins: [addVariablesForColors],
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
